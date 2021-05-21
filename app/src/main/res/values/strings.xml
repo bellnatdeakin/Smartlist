@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SmartList</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gotonextbutton">Go to...</string>
+    <string name="addtextbutton">Add Text</string>
+    <string name="textview">TextView</string>
+    <string name="addsomethingbutton">Add ???</string>
+</resources>
