@@ -1,10 +1,7 @@
 package com.example.smartlist
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import kotlinx.android.synthetic.main.list_item.view.*
 
 @Dao
@@ -18,4 +15,7 @@ interface ItemDAO {
 
     @Delete
     fun deleteItem(item: Item)
+
+    @Update
+    fun updateItem(item: Item)
 }

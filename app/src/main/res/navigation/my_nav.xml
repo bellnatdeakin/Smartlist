@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_listFragment_to_welcomescreen"
             app:destination="@id/welcomescreen" />
+        <action
+            android:id="@+id/action_listFragment_to_editItem"
+            app:destination="@id/editItem" />
     </fragment>
     <fragment
         android:id="@+id/welcomescreen"
@@ -27,7 +30,18 @@
     </fragment>
     <fragment
         android:id="@+id/dialog"
-        android:name="com.example.smartlist.fragments.dialog"
+        android:name="com.example.smartlist.fragments.Dialog"
         android:label="fragment_dialog"
         tools:layout="@layout/fragment_dialog" />
+    <fragment
+        android:id="@+id/editItem"
+        android:name="com.example.smartlist.fragments.EditItem"
+        android:label="fragment_edit_item"
+        tools:layout="@layout/fragment_edit_item" >
+        <action
+            android:id="@+id/action_editItem_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument android:name="currentItem"
+            app:argType="com.example.smartlist.Item"/>
+    </fragment>
 </navigation>

@@ -34,7 +34,7 @@
         android:layout_marginEnd="134dp"
         android:layout_marginRight="134dp"
         android:layout_marginBottom="47dp"
-        android:text="@string/addtextbutton"
+        android:text="@string/additembutton"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -50,7 +50,7 @@
         android:layout_marginTop="47dp"
         android:layout_marginEnd="134dp"
         android:layout_marginRight="134dp"
-        android:text="@string/addsomethingbutton"
+        android:text="@string/checkmapbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,10 +66,16 @@
         android:layout_marginEnd="81dp"
         android:layout_marginRight="81dp"
         android:layout_marginBottom="46dp"
+        android:gravity="center"
         android:text="@string/textview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/gotonextbutton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

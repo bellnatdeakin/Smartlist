@@ -10,7 +10,11 @@ import kotlinx.android.synthetic.main.list_item.view.*
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelStoreOwner
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.smartlist.fragments.ListFragment
+import com.example.smartlist.fragments.ListFragmentDirections
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
@@ -33,12 +37,24 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
         val currentItem = itemList[position]
 
         holder.view.item.text = currentItem.text
+        holder.view.item.isChecked = currentItem.checked
 
         holder.view.setOnClickListener {
-            Toast.makeText(holder.view.context, currentItem.text, Toast.LENGTH_LONG).show()
+            currentItem.checked = !currentItem.checked
+            if(currentItem.checked) {
+            holder.view.item.setCheckMarkDrawable(R.drawable.checkbox3)
+            }
+            else {
+                holder.view.item.setCheckMarkDrawable(R.drawable.uncheckedbox)
+            }
+            Toast.makeText(holder.view.context, "${currentItem.checked}", Toast.LENGTH_SHORT).show()
         }
 
-
+        holder.view.setOnLongClickListener{
+            val action = ListFragmentDirections.actionListFragmentToEditItem(currentItem)
+            holder.view.findNavController().navigate(action)
+            true
+        }
     }
 
     fun setData(item: List<Item>){

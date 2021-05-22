@@ -41,7 +41,7 @@ class WelcomeScreen : Fragment() {
             mDialogView.dialog_button.setOnClickListener{
                 mAlertDialog.dismiss()
                 val text = mDialogView.eT.text.toString()
-                mUserViewModel.addItem(Item(0, text))
+                mUserViewModel.addItem(Item(0, text, false))
                 Toast.makeText(requireContext(), "Added $text", Toast.LENGTH_LONG).show()
             }
         }

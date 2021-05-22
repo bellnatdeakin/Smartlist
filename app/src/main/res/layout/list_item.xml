@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatCheckedTextView
         android:id="@+id/item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:checkMark="@drawable/uncheckedbox"
         android:padding="20dp"
         android:textSize="20sp"
         />
