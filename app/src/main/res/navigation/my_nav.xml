@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.smartlist.fragments.ListFragment"
-        android:label="fragment_list"
+        android:label="SmartList - My List"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_welcomescreen"
@@ -19,7 +19,7 @@
     <fragment
         android:id="@+id/welcomescreen"
         android:name="com.example.smartlist.fragments.WelcomeScreen"
-        android:label="fragment_welcomescreen"
+        android:label="SmartList - Home"
         tools:layout="@layout/fragment_welcomescreen" >
         <action
             android:id="@+id/action_welcomescreen_to_listFragment"
@@ -36,7 +36,7 @@
     <fragment
         android:id="@+id/editItem"
         android:name="com.example.smartlist.fragments.EditItem"
-        android:label="fragment_edit_item"
+        android:label="SmartList - Edit"
         tools:layout="@layout/fragment_edit_item" >
         <action
             android:id="@+id/action_editItem_to_listFragment"

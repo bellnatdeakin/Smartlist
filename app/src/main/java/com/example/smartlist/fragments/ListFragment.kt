@@ -44,4 +44,8 @@ class ListFragment : Fragment() {
 
         return view
     }
+
+    fun setChecked(int: Int) {
+
+    }
 }

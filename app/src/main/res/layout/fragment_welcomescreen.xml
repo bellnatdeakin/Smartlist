@@ -9,13 +9,28 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <!--    <Button-->
+    <!--        android:id="@+id/gotomapbutton"-->
+    <!--        android:layout_width="144dp"-->
+    <!--        android:layout_height="85dp"-->
+    <!--        android:layout_marginStart="133dp"-->
+    <!--        android:layout_marginLeft="133dp"-->
+    <!--        android:layout_marginTop="47dp"-->
+    <!--        android:layout_marginEnd="134dp"-->
+    <!--        android:layout_marginRight="134dp"-->
+    <!--        android:text="@string/checkmapbutton"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/addtextbutton" />-->
+
     <Button
         android:id="@+id/gotonextbutton"
         android:layout_width="144dp"
         android:layout_height="85dp"
         android:layout_marginStart="133dp"
         android:layout_marginLeft="133dp"
-        android:layout_marginTop="167dp"
+        android:layout_marginTop="280dp"
         android:layout_marginEnd="134dp"
         android:layout_marginRight="134dp"
         android:text="@string/gotonextbutton"
@@ -30,36 +45,20 @@
         android:layout_height="85dp"
         android:layout_marginStart="133dp"
         android:layout_marginLeft="133dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="92dp"
         android:layout_marginEnd="134dp"
         android:layout_marginRight="134dp"
         android:layout_marginBottom="47dp"
         android:text="@string/additembutton"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gotonextbutton" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="144dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="133dp"
-        android:layout_marginLeft="133dp"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="134dp"
-        android:layout_marginRight="134dp"
-        android:text="@string/checkmapbutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addtextbutton" />
-
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="250dp"
-        android:layout_height="81dp"
+        android:layout_width="284dp"
+        android:layout_height="109dp"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="40dp"
@@ -69,13 +68,19 @@
         android:gravity="center"
         android:text="@string/textview"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
+        android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/gotonextbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.576" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

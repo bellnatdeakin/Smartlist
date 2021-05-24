@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import com.example.smartlist.R
 import kotlinx.android.synthetic.main.fragment_welcomescreen.view.*
@@ -38,11 +37,14 @@ class WelcomeScreen : Fragment() {
                 .setView(mDialogView)
             val mAlertDialog = mBuilder.show()
 
-            mDialogView.dialog_button.setOnClickListener{
-                mAlertDialog.dismiss()
+            mDialogView.submit_button.setOnClickListener{
                 val text = mDialogView.eT.text.toString()
                 mUserViewModel.addItem(Item(0, text, false))
                 Toast.makeText(requireContext(), "Added $text", Toast.LENGTH_LONG).show()
+                mDialogView.eT.text.clear()
+            }
+            mDialogView.done_button.setOnClickListener{
+                mAlertDialog.dismiss()
             }
         }
 

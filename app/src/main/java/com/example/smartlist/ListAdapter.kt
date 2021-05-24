@@ -19,6 +19,7 @@ import com.example.smartlist.fragments.ListFragmentDirections
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     private var itemList = emptyList<Item>()
+    private lateinit var mUserViewModel: ItemViewModel
 
     class ViewHolder (val view: View) : RecyclerView.ViewHolder(view)
 
@@ -38,22 +39,11 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
         holder.view.item.text = currentItem.text
         holder.view.item.isChecked = currentItem.checked
+        holder.view.item.id = currentItem.uid
 
-        holder.view.setOnClickListener {
-            currentItem.checked = !currentItem.checked
-            if(currentItem.checked) {
-            holder.view.item.setCheckMarkDrawable(R.drawable.checkbox3)
-            }
-            else {
-                holder.view.item.setCheckMarkDrawable(R.drawable.uncheckedbox)
-            }
-            Toast.makeText(holder.view.context, "${currentItem.checked}", Toast.LENGTH_SHORT).show()
-        }
-
-        holder.view.setOnLongClickListener{
+        holder.view.setOnClickListener{
             val action = ListFragmentDirections.actionListFragmentToEditItem(currentItem)
             holder.view.findNavController().navigate(action)
-            true
         }
     }
 
